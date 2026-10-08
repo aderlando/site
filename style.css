@@ -1,0 +1,156 @@
+:root{
+/* Design System: 8 cores */
+--p:#111;--pe:#c2410c;--pc:#ffedd5;
+--s:#ff8247;--sc:#292929;--b:#fff;--nc:#f3f4f6;--n:#6b7280;
+/* Tipografia: 6 níveis */
+--t1:.75rem;--t2:.875rem;--t3:1rem;
+--t4:1.25rem;--t5:1.75rem;--t6:3.5rem;
+/* Espaçamento modular: base 4px */
+--e1:.25rem;--e2:.5rem;--e3:.75rem;--e4:1rem;
+--e5:1.5rem;--e6:2rem;--e7:3rem;--e8:4rem;
+--r:8px;--sh:0 3px 12px #0002;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+font-size:var(--t3);line-height:1.6;
+color:var(--s);background:var(--nc)
+}
+
+/* Hierarquia tipográfica */
+h1{font-size:var(--t6)}
+h2{font-size:var(--t5)}
+h3{font-size:var(--t4)}
+p,label,input,select,button{font-size:var(--t3)}
+small{font-size:var(--t2)}
+.aux{font-size:var(--t1)}
+h1,h2,h3{font-weight:700}
+
+/* Cabeçalho */
+header{
+background:var(--s);color:var(--b);
+text-align:center;padding:var(--e7) var(--e4)
+}
+header h1{color:var(--p);margin-bottom:var(--e2)}
+
+/* Menu */
+nav{margin-top:var(--e5)}
+nav ul{
+display:flex;justify-content:center;flex-wrap:wrap;
+gap:var(--e4);list-style:none
+}
+nav a{
+color:var(--b);text-decoration:none;font-weight:bold;
+padding:var(--e2)
+}
+nav a:hover,nav a:focus{
+background:var(--p);color:var(--s);border-radius:var(--r)
+}
+
+/* Conteúdo */
+main{width:min(1100px,92%);margin:auto}
+
+section{
+background:var(--b);margin:var(--e6) 0;
+padding:var(--e6);border-radius:var(--r);
+box-shadow:var(--sh)
+}
+section h2{
+color:var(--pe);border-bottom:3px solid var(--p);
+padding-bottom:var(--e2);margin-bottom:var(--e5)
+}
+section p{margin-bottom:var(--e4)}
+section ul{padding-left:var(--e6)}
+
+#inicio img{
+display:block;max-width:100%;height:auto;
+margin:var(--e5) auto;border-radius:var(--r)
+}
+
+/* Projetos */
+article{
+background:var(--pc);border-left:5px solid var(--p);
+padding:var(--e5);margin-bottom:var(--e5);
+border-radius:var(--r)
+}
+
+/* Formulário */
+fieldset{
+border:2px solid var(--p);border-radius:var(--r);
+padding:var(--e5);margin-bottom:var(--e6)
+}
+legend{
+color:var(--pe);font-size:var(--t4);
+font-weight:bold;padding:0 var(--e2)
+}
+label{font-weight:bold}
+
+input,select{
+width:100%;padding:var(--e3);margin-top:var(--e1);
+border:1px solid var(--n);border-radius:var(--r);
+background:var(--b)
+}
+input:focus,select:focus{
+outline:3px solid var(--pc);border-color:var(--p)
+}
+input[type=checkbox]{
+width:auto;margin-right:var(--e2)
+}
+
+/* Botões */
+button{
+padding:var(--e3) var(--e5);border:0;
+border-radius:var(--r);font-weight:bold;
+cursor:pointer;margin-right:var(--e2)
+}
+button[type=submit]{background:var(--p);color:var(--b)}
+button[type=submit]:hover{background:var(--pe)}
+button[type=reset]{background:var(--sc);color:var(--b)}
+
+/* Contato e rodapé */
+address{font-style:normal}
+address a{color:var(--pe);font-weight:bold}
+
+footer{
+background:var(--s);color:var(--b);
+text-align:center;padding:var(--e6)
+}
+footer a{color:var(--p)}
+
+/* Responsivo */
+@media(max-width:768px){
+h1{font-size:var(--t5)}
+h2{font-size:var(--t4)}
+nav ul{flex-direction:column}
+section{padding:var(--e4)}
+button{width:100%;margin:var(--e1) 0}
+}
+/* Feedback padronizado com as variáveis do projeto */
+.alerta{padding:var(--e4);margin:var(--e4) 0;border-radius:var(--r);border-left:5px solid var(--pe);background:var(--pc);color:var(--p);font-weight:bold}
+.alerta[hidden]{display:none}
+.alerta.erro{border-color:#b91c1c;background:#fef2f2;color:#991b1b}
+.alerta.sucesso{border-color:#15803d;background:#f0fdf4;color:#166534}
+.campo-invalido{border:2px solid #b91c1c!important}
+.botao-modal{background:var(--pe);color:var(--b)}
+.botao-modal:hover,.botao-modal:focus-visible{background:var(--p)}
+dialog{width:min(460px,92vw);max-height:85vh;overflow:auto;margin:auto;padding:var(--e6);border:2px solid var(--pe);border-radius:var(--r);box-shadow:var(--sh);color:var(--p);background:var(--b)}
+dialog::backdrop{background:#0009}
+dialog h3,dialog p{margin-bottom:var(--e4)}
+
+/* Feedback acessível do cadastro */
+.mensagem-campo{display:block;color:#a3261c;font-size:var(--t2);margin-top:var(--e1)}
+.campo-invalido,[aria-invalid="true"]{border:2px solid #a3261c!important;background:#fff8f7}
+#form-cadastro :is(input,select,button):focus-visible,.botao-modal:focus-visible{outline:3px solid #174ea6;outline-offset:3px}
+#form-cadastro button{margin:var(--e2) var(--e2) var(--e2) 0}
+
+/* Hover e foco visíveis em TODOS os botões do formulário */
+#form-cadastro button{background:var(--sc);color:#fff;transition:background-color .2s,transform .2s,box-shadow .2s}
+#form-cadastro button[type="submit"]{background:var(--pe)}
+#form-cadastro button[type="reset"]{background:#555}
+#form-cadastro button:hover{background:#a63208;color:#fff;transform:translateY(-2px);box-shadow:0 4px 10px #0003}
+#form-cadastro button:focus-visible{outline:3px solid #174ea6;outline-offset:3px}
+#form-cadastro button:active{transform:translateY(0)}
+nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:5px}
