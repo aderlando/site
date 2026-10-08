@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Associação Revivendo: inclusão, capacitação e ações sociais" name="description"/><link href="css/style.css" rel="stylesheet"/><title>Cadastro | Associação Revivendo</title></head><body><img alt="Ação social realizada pelo Instituto Revivendo" loading="lazy" src="img/logo.png" width="100"/><header id="topo">
+<h1>Instituto Revivendo</h1>
+<p>Mais Que Apoio, é Recomeço.</p>
+<nav aria-label="Navegação principal">
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="instituto.html">O Instituto</a></li>
+<li><a href="projetos.html">Projetos</a></li>
+<li><a aria-current="page" href="cadastro.html">Cadastro</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+</header><main id="app"><section id="cadastro">
+<h2>Cadastro</h2>
+<p>
+Preencha os dados abaixo. Campos com * são obrigatórios.
+</p>
+<div aria-live="assertive" class="alerta" hidden="" id="alerta" role="alert"></div>
+<form action="/cadastro" autocomplete="on" id="form-cadastro" method="post" novalidate="">
+<fieldset>
+<legend>Dados Pessoais</legend>
+<p>
+<label for="nome">Nome completo: *</label><br/>
+<input autocomplete="name" id="nome" maxlength="100" minlength="3" name="nome" required="" type="text"/>
+</p>
+<p>
+<label for="cpf">CPF: *</label><br/>
+<input id="cpf" inputmode="numeric" maxlength="14" name="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00" required="" title="Digite no formato 000.000.000-00" type="text"/>
+</p>
+<p>
+<label for="nascimento">Data de nascimento: *</label><br/>
+<input autocomplete="bday" id="nascimento" name="nascimento" required="" type="date"/>
+</p>
+</fieldset>
+<fieldset>
+<legend>Contato</legend>
+<p>
+<label for="email">E-mail: *</label><br/>
+<input autocomplete="email" id="email" maxlength="150" name="email" placeholder="exemplo@email.com" required="" type="email"/>
+</p>
+<p>
+<label for="telefone">Telefone/WhatsApp: *</label><br/>
+<input autocomplete="tel" id="telefone" inputmode="tel" maxlength="15" name="telefone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(83) 99999-9999" required="" title="Digite no formato (00) 00000-0000" type="tel"/>
+</p>
+</fieldset>
+<fieldset>
+<legend>Endereço</legend>
+<p>
+<label for="cep">CEP: *</label><br/>
+<input autocomplete="postal-code" id="cep" inputmode="numeric" maxlength="9" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="58000-000" required="" title="Digite no formato 00000-000" type="text"/>
+</p>
+<p>
+<label for="endereco">Endereço: *</label><br/>
+<input autocomplete="address-line1" id="endereco" maxlength="150" name="endereco" required="" type="text"/>
+</p>
+<p>
+<label for="numero">Número: *</label><br/>
+<input id="numero" maxlength="10" name="numero" required="" type="text"/>
+</p>
+<p>
+<label for="bairro">Bairro: *</label><br/>
+<input id="bairro" maxlength="100" name="bairro" required="" type="text"/>
+</p>
+<p>
+<label for="cidade">Cidade: *</label><br/>
+<input autocomplete="address-level2" id="cidade" maxlength="100" name="cidade" required="" type="text"/>
+</p>
+<p>
+<label for="estado">Estado: *</label><br/>
+<select autocomplete="address-level1" id="estado" name="estado" required="">
+<option value="">Selecione</option>
+<option value="AC">Acre</option>
+<option value="AL">Alagoas</option>
+<option value="AP">Amapá</option>
+<option value="AM">Amazonas</option>
+<option value="BA">Bahia</option>
+<option value="CE">Ceará</option>
+<option value="DF">Distrito Federal</option>
+<option value="ES">Espírito Santo</option>
+<option value="GO">Goiás</option>
+<option value="MA">Maranhão</option>
+<option value="MT">Mato Grosso</option>
+<option value="MS">Mato Grosso do Sul</option>
+<option value="MG">Minas Gerais</option>
+<option value="PA">Pará</option>
+<option value="PB">Paraíba</option>
+<option value="PR">Paraná</option>
+<option value="PE">Pernambuco</option>
+<option value="PI">Piauí</option>
+<option value="RJ">Rio de Janeiro</option>
+<option value="RN">Rio Grande do Norte</option>
+<option value="RS">Rio Grande do Sul</option>
+<option value="RO">Rondônia</option>
+<option value="RR">Roraima</option>
+<option value="SC">Santa Catarina</option>
+<option value="SP">São Paulo</option>
+<option value="SE">Sergipe</option>
+<option value="TO">Tocantins</option>
+</select>
+</p>
+</fieldset>
+<fieldset>
+<legend>Confirmação</legend>
+<p>
+<input id="confirmacao" name="confirmacao" required="" type="checkbox" value="sim"/>
+<label for="confirmacao">
+Confirmo que as informações fornecidas são verdadeiras. *
+</label>
+</p>
+</fieldset>
+<p>
+<button type="submit">Enviar Cadastro</button>
+<button id="salvar-rascunho" type="button">Salvar rascunho</button>
+<button id="editar-cadastro" type="button">Editar</button>
+<button type="reset">Limpar</button>
+</p>
+</form>
+
+
+</section></main><footer>
+<p>
+© 2026 Instituto Revivendo. Todos os direitos reservados.
+</p>
+<p><a href="#topo">Voltar ao início</a></p>
+</footer><script defer="True" src="js/feedback.js"></script></body></html>
